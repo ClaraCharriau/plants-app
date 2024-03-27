@@ -7,5 +7,5 @@ import { Plant } from 'src/app/models/plant';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent {
-  @Input() unePlanteAAfficher!: Plant;
+  @Input() plantToDisplay!: Plant;
 }

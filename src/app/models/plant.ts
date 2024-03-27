@@ -1,8 +1,8 @@
 export interface Plant {
   id: number;
-  nom: string;
-  soleil: string;
-  arrosage: number;
-  categorie: string;
-  image: string;
+  name: string;
+  sunlight: string;
+  watering: number;
+  category: string;
+  imagePath: string;
 }

@@ -27,7 +27,7 @@ export class PageHomeComponent implements OnInit {
       // Pour supprimer les doublons d'un tableau
       // [...new Set(tableau)]
       this.categories = [
-        ...new Set(this.plantsToDisplay.map((plant) => plant.categorie)),
+        ...new Set(this.plantsToDisplay.map((plant) => plant.category)),
       ];
       console.log('this.categories : ', this.categories);
     });
@@ -56,12 +56,12 @@ export class PageHomeComponent implements OnInit {
     this.plantsToDisplay = [...this.allPlants];
     if (this.userInput) {
       this.plantsToDisplay = this.plantsToDisplay.filter((plant) =>
-        plant.nom.toLowerCase().includes(this.userInput.toLowerCase())
+        plant.name.toLowerCase().includes(this.userInput.toLowerCase())
       );
     }
     if (this.categoriesChecked) {
       this.plantsToDisplay = this.plantsToDisplay.filter((plant) =>
-        this.categoriesChecked.includes(plant.categorie)
+        this.categoriesChecked.includes(plant.category)
       );
     }
   }
